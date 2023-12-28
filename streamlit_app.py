@@ -1,11 +1,11 @@
-
+# streamlit run streamlit_app.py
 
 from pathlib import Path
 import json
 import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_extras.let_it_rain import rain
-
+import lottie
 # Directories and file paths
 THIS_DIR = Path(__file__).parent
 CSS_FILE = THIS_DIR / "style" / "style.css"
@@ -31,7 +31,7 @@ def get_person_name():
 
 
 # Page configuration
-st.set_page_config(page_title="Happy Holidays", page_icon="🎄")
+st.set_page_config(page_title="Happy Ramazan", page_icon="🎄")
 
 # Run snowfall animation
 run_snow_animation()
@@ -42,7 +42,7 @@ with open(CSS_FILE) as f:
 
 # Display header with personalized name
 PERSON_NAME = get_person_name()
-st.header(f"Happy Holidays, {PERSON_NAME}! 🎄", anchor=False)
+st.header(f"Happy Ramazan, {PERSON_NAME}! 🎄", anchor=False)
 
 # Display the Lottie animation
 lottie_animation = load_lottie_animation(LOTTIE_ANIMATION)
